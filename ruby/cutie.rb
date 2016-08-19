@@ -1,5 +1,5 @@
 class Cutie
-  attr_reader :name
+  attr_accessor :name
 
   def initialize(name, hugs=false)
     @name = name
@@ -8,5 +8,9 @@ class Cutie
 
   def hugs?
     @hugs ? "Cutie #{@name} wants hugs!" : "Cutie #{@name} desires empathy."
+  end
+
+  def update_name(new_name)
+    @name = new_name
   end
 end
